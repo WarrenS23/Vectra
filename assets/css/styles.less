@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// Fonts
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('BebasNeue-Regular.woff2') format('woff2'),
+        url('BebasNeue-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+nav {
+
+    .sayHello {
+        text-align: left;
+    }
+    .logo {
+        text-align: center;
+    }
+    .myAccount {
+        text-align: right;
+    }
+    .mainNav {}
+
+    .subNav {
+        text-align: center;
+    }
+}
+
+main {
+    .breadcrumbNav {
+        text-align: center;
+    }
+
+    .productVisualContainer {
+        background-image: url('../img/product-image-1.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 70vh;
+
+        .productInfoContainer {
+            backdrop-filter: blur(8px);
+
+            .productCard {
+
+                .productTitle {
+                    font-family: 'Bebas Neue';
+
+
+                    .brandLogo {
+                        background-image: url('../img/logo.svg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        height: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+}
