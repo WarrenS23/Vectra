@@ -14,44 +14,163 @@
 }
 
 
+// Avenir
+@font-face {
+    font-family: 'Avenir LT Std Black';
+    src: url('../fonts/AvenirLTStd-Black.woff2') format('woff2'),
+        url('../fonts/AvenirLTStd-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std Book';
+    src: url('../fonts/AvenirLTStd-Book.woff2') format('woff2'),
+        url('../fonts/AvenirLTStd-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std Roman';
+    src: url('AvenirLTStd-Roman.woff2') format('woff2'),
+        url('../fonts/AvenirLTStd-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+// Avenir
+
+
+body {
+    font-family: 'Avenir LT Std Book';
+
+}
+
+
 
 nav {
-
+    a {
+        color: #404040;
+        &:hover {
+            text-decoration: none;
+            color: initial;
+        }
+    }
     .sayHello {
         text-align: left;
     }
     .logo {
         text-align: center;
-    }
-    .myAccount {
-        text-align: right;
-    }
-    .mainNav {}
-
-    .subNav {
-        text-align: center;
-    }
-}
-
-main {
-    .breadcrumbNav {
-        text-align: center;
-    }
-
-    .productVisualContainer {
-        background-image: url('../img/product-image-1.png');
+        background-image: url('../img/cupcake.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        height: 70vh;
+        height: 3rem;
+        width: 3rem;
+        margin: 0 auto;
+    }
+    .myAccount {
+        text-align: right;
+
+        .shoppingCart {
+            background-image: url('../img/cart-dark.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 1.5rem;
+            width: 1.5rem;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .mainNav {
+        padding: 1rem 4rem;
+        font-family: 'Avenir LT Std Book';
+        color: #404040;
+
+    }
+
+    .subNav {
+        text-align: center;
+        padding: 1.5rem 0;
+
+        .subNavItem {
+            font-family: 'Avenir LT Std Black';
+        }
+
+        .sale {
+            color: #0096FF;
+        }
+
+    }
+}
+
+.mainSectionWrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 4rem;
+
+    .breadcrumbNav {
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 1rem 0;
+        color: #BFBFBF;
+        
+        a {
+            color: #BFBFBF;
+            padding: 0 1rem;
+        }
+
+        span {
+            color: #737373;
+            padding: 0 1rem;
+
+        }
+
+    }
+
+    .productVisualContainer {
+        margin: 2rem 0;
+
+        .new {
+            font-family: 'Avenir LT Std Black';
+            background-color: #fff;
+            height: 2rem;
+            padding: 0.5rem;
+            position: absolute;
+            z-index: 3;
+            margin: 1rem;
+            border: solid 1px black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+        }
 
         .productInfoContainer {
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(30px);
+            width: auto;
+            // height: 55%;
+            display: flex;
+            padding: 1rem 0;
+            position: absolute;
+            z-index: 2;
+            right: 0;
+            transform: translateY(4rem);
+
+           
 
             .productCard {
 
                 .productTitle {
                     font-family: 'Bebas Neue';
+
+                    .title {
+                        font-size: 2rem;
+                    }
 
 
                     .brandLogo {
@@ -59,11 +178,112 @@ main {
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: contain;
-                        height: 25px;
+                        height: 2.5rem;
+                        width: 3rem;
+                        vertical-align: middle;
+                        margin: 0 auto;
                     }
+                }
+
+                .addToCart button {
+                    background-color: black;
+                    color: #fff;
+                    padding: 0.5rem 2rem;
+                    border: none;
+                    width: 100%;
+                }
+
+                .productPrice {
+                    font-size: 1.75rem;
+                    font-family: 'Avenir LT Std Black';
+                    padding: 1rem 0;
+
+                    .currencyIcon {
+                        display: inline-block;
+                    }
+                    .priceValue {
+                        display: inline-block;
+
+                    }
+                }
+
+                .productQuantity {
+                    padding: 0 0 1rem 0;
+                    input {
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                        padding-left: 0.5rem;
+                        border: none;
+                        vertical-align: middle;
+                    }
+
+                    .quantity {
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+
+                .lockIcon {
+                    background-image: url('../img/lock.png');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                .safeShopping {
+                    display: inline-block;
                 }
             }
         }
+
+        .carousel-control-next, .carousel-control-prev {
+            top: auto;
+            bottom: 2rem;
+        }
+
+        .carousel-control-prev-icon {
+            background-image: url('../img/left-arrow.png');
+            width: 10px;
+            height: 16px;
+        }
+
+        .carousel-control-next {
+            right: auto;
+            left: 5rem;
+        }
+        .carousel-control-next-icon {
+            background-image: url('../img/right-arrow.png');
+            width: 10px;
+            height: 16px;
+        }
     }
 
+}
+
+.colourFooter {
+    // height: 0.25rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    .blue {
+        background-color: #0096FF;
+        height: 0.5rem;
+        width: 100%;
+    }
+    .green {
+        background-color: #5AC31D;
+        height: 0.5rem;
+        width: 100%;
+    }
+    .yellow {
+        background-color: #FFD300;
+        height: 0.5rem;
+        width: 100%;
+    }
 }

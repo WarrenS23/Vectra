@@ -32,16 +32,19 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="logo">
-                            <a href="#">
-                                logo
-                            </a>
-                        </div>
+                        <a href="#">
+                            <div class="logo">
+                                
+                            </div>
+                        </a>
                     </div>
                     <div class="col">
                         <div class="myAccount">
                             <a href="#">
                                 My account
+                            </a>
+                            <a href="#">
+                                <div class="shoppingCart"></div>
                             </a>
                         </div>
                     </div>
@@ -88,7 +91,7 @@
         </div>
     </nav>
 
-    <main>
+    <div class="mainSectionWrapper">
 
         <div class="breadcrumbNav">
             <div class="container">
@@ -101,7 +104,10 @@
                         <a href="#">
                             Sneakers
                         </a>
-                       / Nike Classic Cortez
+                       / 
+                       <span>
+                            Nike Classic Cortez
+                       </span>
 
                     </div>
                 </div>
@@ -113,6 +119,9 @@
             <div class="row">
                 <div class="col">
                     <div class="productVisualContainer">
+                        <div class="new">
+                                New
+                        </div>
                         <div class="productInfoContainer">
                             <div class="container">
                                 <div class="row">
@@ -121,7 +130,7 @@
                                             <div class="container-fluid">
                                                 <div class="productTitle">
                                                     <div class="row">
-                                                        <div class="col">
+                                                        <div class="col-7">
                                                             <div class="title">
                                                                 Nike Classic Cortez
                                                             </div>
@@ -139,31 +148,34 @@
                                                             <div class="currencyIcon">
                                                                 R
                                                             </div>
+                                                            <div class="priceValue">
+                                                                1840.00
+                                                            </div>
                                                         </div>
                                                         <div class="col">
-                                                            <div class="priceValue">
-                                                                1840
-                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="productQuantity">
                                                     <div class="row">
-                                                        <div class="col">
+                                                        <div class="col-3">
                                                             <div class="quantity">
-                                                                1
+                                                                <input type="number" placeholder="1" value="1">
                                                             </div>
                                                         </div>
-                                                        <div class="col">
+                                                        <div class="col-6">
                                                             <div class="addToCart">
-                                                                <button>Add to cart</button>
+                                                                <button>
+                                                                    <img src="../cupcake-sneakers/assets/img/cart-light.png" alt="">
+                                                                    Add to cart</button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col">
-                                                        <p>
+                                                        <div class="lockIcon"></div>
+                                                        <p class="safeShopping">
                                                             Safe and reliable shopping
                                                         </p>
                                                     </div>
@@ -174,7 +186,101 @@
                                 </div>
                             </div>
                         </div>
+                        <div id="carouselControls" class="carousel slide" data-ride="carousel" data-interval="false">
+                            <div class="carousel-inner">
+                                
+                              <div class="carousel-item active">
+                                <img class="d-block" src="./assets/img/product-image-1.png" alt="First slide">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block" src="./assets/img/product-image-2.png" alt="Second slide">
+                              </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </div>
+
+                          
                     </div>
+
+                    
+                    <!-- <div class="productVisualContainer">
+                        <div class="new">
+                            <p>
+                                New
+                            </p>
+                        </div>
+                        <div class="productInfoContainer">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="productCard">
+                                            <div class="container-fluid">
+                                                <div class="productTitle">
+                                                    <div class="row">
+                                                        <div class="col-7">
+                                                            <div class="title">
+                                                                Nike Classic Cortez
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="brandLogo">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="productPrice">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="currencyIcon">
+                                                                R
+                                                            </div>
+                                                            <div class="priceValue">
+                                                                1840.00
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="productQuantity">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <div class="quantity">
+                                                                <input type="number" placeholder="1" value="1">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="addToCart">
+                                                                <button>
+                                                                    <img src="../cupcake-sneakers/assets/img/cart-light.png" alt="">
+                                                                    Add to cart</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="lockIcon"></div>
+                                                        <p class="safeShopping">
+                                                            Safe and reliable shopping
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
 
                     
                 </div>
@@ -184,9 +290,25 @@
         
 
         
-    </main>
+    </div>
+
+    <div class="colourFooter">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col blue">&nbsp;</div>
+                <div class="col green">&nbsp;</div>
+                <div class="col yellow">&nbsp;</div>
+            </div>
+        </div>
+    </div>
 
 
+
+    <script>
+        $('.carousel').carousel(){
+            pause: true;
+        }
+    </script>
 
 
     <!-- Bootstrap JS  -->
