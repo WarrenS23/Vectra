@@ -144,7 +144,7 @@
                                     <a href="#">
                                         Electronics
                                     </a>
-                                    <a href="#">
+                                    <a href="#" class="sale">
                                         On Sale!
                                     </a>
                                 </div>
@@ -383,7 +383,13 @@
             x.style.display = "block";
           }
         }
-        </script>
+
+        let addToCartBtn = document.querySelector('.addToCart button');
+
+        addToCartBtn.addEventListener('click', function () {
+            addToCartBtn.classList.add('addedToCart');
+        })
+    </script>
 
 
     <!-- Bootstrap JS  -->

@@ -2,8 +2,8 @@
 // Fonts
 @font-face {
     font-family: 'Bebas Neue';
-    src: url('BebasNeue-Regular.woff2') format('woff2'),
-        url('BebasNeue-Regular.woff') format('woff');
+    src: url('../fonts/BebasNeue-Regular.woff2') format('woff2'),
+        url('../fonts/BebasNeue-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -69,6 +69,9 @@ nav {
     }
     .sayHello {
         text-align: left;
+        a:hover {
+            color: #a2a2a2;
+        }
     }
     .logo {
         text-align: center;
@@ -77,9 +80,18 @@ nav {
         background-size: contain;
         height: 1.5rem;
         margin: 0 auto;
+        transition: all .2s ease-in-out;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
     }
     .myAccount {
         text-align: right;
+
+        a:hover {
+            color: #a2a2a2;
+        }
 
         .shoppingCart {
             background-image: url('../img/cart-dark.png');
@@ -107,12 +119,20 @@ nav {
         text-align: center;
         padding: 1.5rem 0;
 
+        
+
         .subNavItem {
             font-family: 'Avenir LT Std Black';
+            &:hover {
+                color: #a2a2a2;
+            }
         }
 
         .sale {
             color: #0096FF;
+            &:hover {
+                color: #a2a2a2 !important;
+            }
         }
 
     }
@@ -166,12 +186,10 @@ nav {
             backdrop-filter: blur(30px);
             width: auto;
             max-width: 400px;
-            // height: 55%;
             display: flex;
             padding: 1.75rem 0;
             position: absolute;
             z-index: 2;
-            // right: 0;
             top: 100%;
 
            
@@ -199,6 +217,7 @@ nav {
                 }
 
                 .addToCart {
+
                     
                     
                     button {
@@ -208,12 +227,27 @@ nav {
                         padding: 0.5rem 2rem;
                         border: none;
                         width: 100%;
-    
+                        transition: all .2s ease-in-out;
+                        &:hover {
+                            border-radius: 5px;
+                        }
+        
+                        &:hover {
+                            transform: scale(1.01);
+                        }
+                        &:focus {
+                            outline: none;
+                        }
                     }
 
                     .shoppingCart{
                         margin: 0 0.25rem;
                     }
+                }
+
+                .addedToCart {
+                    background-color: #5AC31D !important; 
+                    color: white;
                 }
                 
 
@@ -253,12 +287,8 @@ nav {
                 .safeShopping {
                     font-family: 'Avenir LT Std Book';
                     display: flex;
-                    // align-items: center;
                     margin: 1rem 0;
                     
-                    .lockIcon {
-                        
-                    }
                 }
             }
         }
@@ -302,7 +332,6 @@ nav {
 }
 
 .colourFooter {
-    // height: 0.25rem;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -329,13 +358,10 @@ nav {
 // Mobile Nav styling
 
 .mobileNavContainer {
-    // .container-fluid {
-    //     padding: 0;
-    // }
 }
 .topnav {
+    font-family: 'Avenir LT Std Black';
     overflow: hidden;
-    // background-color: #333;
     position: relative;
   }
   
@@ -352,7 +378,6 @@ nav {
   }
   
   .topnav a.icon {
-    // background: black;
     display: block;
     position: absolute;
     right: 0;
@@ -361,7 +386,6 @@ nav {
   }
   
   .topnav a:hover {
-    // background-color: #ddd;
     color: black;
   }
   
@@ -373,16 +397,16 @@ nav {
   .fa {
       color: #404040;
   }
+
+  .sale {
+      color: #0096FF !important;
+  }
 // Mobile Nav styling
 
 
 // Queries
 
-@media screen and (min-width: 767px) and (max-width: 990px) {
-    // .productInfoContainer {
-        //     top: 0;
-        // }
-    }
+
    
     @media screen and (min-width: 991px) {
         nav {
@@ -402,10 +426,6 @@ nav {
             max-width: 1440px;
             padding: 0 4rem;
         }
-        
-        // .carousel-inner {
-        //     width: 85% !important;
-        // }
         
     }
     @media screen and (min-width: 1440px) {
