@@ -16,12 +16,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Bootstrap CDN -->
 
+    <!-- Icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Icon  -->
+
 
 </head>
 <body>
 
     <nav>
-        <div class="container-fluid">
+        <div class="container-fluid d-none d-lg-block">
             <div class="mainNav">
                 <div class="row">
                     <div class="col">
@@ -41,7 +45,7 @@
                     <div class="col">
                         <div class="myAccount">
                             <a href="#">
-                                My account
+                                My Account
                             </a>
                             <a href="#">
                                 <div class="shoppingCart"></div>
@@ -89,6 +93,70 @@
             </div>
            </div>
         </div>
+
+        <!-- Mobile Nav  -->
+        <div class="mobileNavContainer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <a href="tel:+271234567">
+                            +27 123 4567
+                        </a>
+                       
+                    </div>
+                    <div class="col">
+                        <div class="myAccount">
+                            <a href="#">
+                                My Account
+                            </a>
+                            <a href="#">
+                                <div class="shoppingCart"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="container-fluid">
+                <div class="row m-0">
+                    <div class="col p-0">
+                        <!-- Top Navigation Menu -->
+                            <div class="topnav">
+                                <a href="#" class="active">
+                                    <div class="logo">
+                                    
+                                    </div>
+                                </a>
+                                
+                                <div id="myLinks">
+                                    <a href="#">
+                                        Apparel
+                                    </a>
+                                    <a href="#">
+                                        Household
+                                    </a>
+                                    <a href="#">
+                                        Essentials
+                                    </a>
+                                    <a href="#">
+                                        Outdoor
+                                    </a>
+                                    <a href="#">
+                                        Electronics
+                                    </a>
+                                    <a href="#">
+                                        On Sale!
+                                    </a>
+                                </div>
+                                
+                                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </nav>
 
     <div class="mainSectionWrapper">
@@ -130,7 +198,7 @@
                                             <div class="container-fluid">
                                                 <div class="productTitle">
                                                     <div class="row">
-                                                        <div class="col-7">
+                                                        <div class="col-8">
                                                             <div class="title">
                                                                 Nike Classic Cortez
                                                             </div>
@@ -144,29 +212,29 @@
                                                 </div>
                                                 <div class="productPrice">
                                                     <div class="row">
-                                                        <div class="col">
+                                                        <div class="col-1">
                                                             <div class="currencyIcon">
                                                                 R
                                                             </div>
+                                                        </div>
+                                                        <div class="col">
                                                             <div class="priceValue">
                                                                 1840.00
                                                             </div>
-                                                        </div>
-                                                        <div class="col">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="productQuantity">
                                                     <div class="row">
-                                                        <div class="col-3">
+                                                        <div class="col-4">
                                                             <div class="quantity">
                                                                 <input type="number" placeholder="1" value="1">
                                                             </div>
                                                         </div>
-                                                        <div class="col-6">
+                                                        <div class="col">
                                                             <div class="addToCart">
                                                                 <button>
-                                                                    <img src="../cupcake-sneakers/assets/img/cart-light.png" alt="">
+                                                                    <img src="../cupcake-sneakers/assets/img/cart-light.png" alt="" class="shoppingCart">
                                                                     Add to cart</button>
                                                             </div>
                                                         </div>
@@ -174,10 +242,12 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col">
-                                                        <div class="lockIcon"></div>
-                                                        <p class="safeShopping">
-                                                            Safe and reliable shopping
-                                                        </p>
+                                                        <div class="safeShopping">
+                                                                <img src="./assets/img/lock.png" alt="" class="lockIcon">
+                                                                <p>
+                                                                    Safe and reliable shopping
+                                                                </p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -305,10 +375,15 @@
 
 
     <script>
-        $('.carousel').carousel(){
-            pause: true;
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
         }
-    </script>
+        </script>
 
 
     <!-- Bootstrap JS  -->
